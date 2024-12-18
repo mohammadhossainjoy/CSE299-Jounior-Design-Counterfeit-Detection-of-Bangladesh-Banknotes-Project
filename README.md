@@ -11,9 +11,9 @@ Author :
 3. Khandakar Anjuman Parvez(2212536042)
 
 supervisor:
-Mr. Md. Ishan Arefin Hossain [IAH]
-Lecturer
-Department of Electrical and Computer Engineering
-North South University
-MSc in Computer Science, Teesside University, UK
-BSc in Computer Science and Engineering, BRAC University, Bangladesh
+-Mr. Md. Ishan Arefin Hossain [IAH]
+-Lecturer
+-Department of Electrical and Computer Engineering
+-North South University
+-MSc in Computer Science, Teesside University, UK
+-BSc in Computer Science and Engineering, BRAC University, Bangladesh
