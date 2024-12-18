@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counterfeit Detection of Bangladesh Banknotes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- This link for bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!-- fonts links -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- This links for Google Fonts Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="all-content">
+        <!--navbar html code  start -->
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" id="logo">
+                    <img src="../static/images/Navbarlogo.png" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fa-solid fa-bars" style="color: white; font-size: 23px;"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#detect">Detect</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#team">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Resource">Resource</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar html code end -->
+        <!-- Home Section HTML Start -->
+        <section id="home">
+            <div class="content">
+                <h1>Identify Counterfeit Bangladeshi <br>banknotes in real time
+                </h1>
+                <p class="fade-in delay">Verify the genuineness of your banknotes using our advanced detection technology.
+                </p>
+                <button id="btn"><a href="{{ url_for('login') }}" >Detect</a></button>
+            </div>
+        </section>
+        <!-- Home Section HTML End -->
+        <!-- about section html start -->
+        <div class="about" id="about">
+            <div class="container">
+                <div class="heading3">ABOUT</div>
+            </div>
+            <div class="container" id="container2">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="../static/images/bg3.jpg" alt="Bangladesh Banknote">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="about-title">Counterfeit Detection of Bangladesh Banknotes</h3>
+                        <p class="about-text">The Counterfeit Detection of Bangladesh Banknote project allows users to verify the authenticity of 500 and 1000 taka
+                        banknotes. When you upload an image, our system automatically assesses security elements like watermarks and holograms
+                        using advanced deep learning techniques. Our goal is to provide a simple, user-friendly solution for combating
+                        counterfeit currency and raising awareness about financial fraud prevention.</p>
+                        <button id="about-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about section html end -->
+
+        <!-- Detect section html code start -->
+        <section class="detect" id="detect">
+            <div class="container">
+                <div class="heading3">Detect Banknote</div>
+            </div>
+            <div class="container" id="container2">
+                <!-- This is Note Detection Section code start -->
+                <section id="note-detection" class="py-5 text-center">
+                    <div class="container">
+                        <h1 class="detect-title">Note Detection</h1>
+                        <h3 class="detect-description">Upload an image of the banknote to check its authenticity.</h3>
+                        <!-- This is Image Upload html code start -->
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-6">
+                                <a href="{{ url_for('login') }}" class="text-decoration-none">
+                                    <input type="file" class="form-control-file mb-3" id="uploadImage" name="image" accept="image/*" required
+                                        style="display: none;">
+                                    <button type="button" class="btn btn-success">Upload Image</button>
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!-- Detect section html code end -->
+        <!-- Team Section HTML Start -->
+        <section class="team my-5 text-center" id="team">
+            <div class="container">
+                <div class="heading3">Our Team</div>
+            </div>
+            <div class="container" id="container2">
+                <div class="row justify-content-center">
+                    <!-- Team Member 1 HTML Start -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="team-member card p-4 shadow-lg" data-aos="zoom-in-down">
+                            <img src="../static/images/joy.jpeg" class="img-fluid rounded-circle team-img">
+                            <h5 class="card-title mt-4">Mohammad Hossain</h5>
+                            <p class="card-text">Computer Science and Engineering<br>North South University</p>
+                            <a href="https://www.facebook.com/mh.joy.75457?mibextid=LQQJ4d"
+                                class="btn btn-outline-primary mt-3">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Team Member 2 HTML Start -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="team-member card p-4 shadow-lg" data-aos="zoom-in-left">
+                            <img src="../static/images/asif.jpeg" class="img-fluid rounded-circle team-img">
+                            <h5 class="card-title mt-4">Asifur Rahman</h5>
+                            <p class="card-text">Computer Science and Engineering<br>North South University</p>
+                            <a href="#" class="btn btn-outline-primary mt-3">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Team Member 3 HTML Start -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="team-member card p-4 shadow-lg" data-aos="zoom-in-right">
+                            <img src="../static/images/pritom.jpeg" class="img-fluid rounded-circle team-img">
+                            <h5 class="card-title mt-4">Khandakar Anjuman</h5>
+                            <p class="card-text">Computer Science and Engineering<br>North South University</p>
+                            <a href="#" class="btn btn-outline-primary mt-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team Section HTML End -->
+
+        <!-- Educational Resource HTML Start -->
+        <section class="Resource my-5" id="Resource">
+            <div class="container">
+                <div class="heading3">Educational Resource</div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm" data-aos="fade-up">
+                            <img src="../static/images/banknote security feature.jpg" alt="Banknote Security Features"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">Understanding Banknote Security Features</h3>
+                                Banknotes incorporate watermarks, security threads, and microprinting as essential security elements to deter
+                                counterfeiting. These elements offer various levels verification...</p>
+                                <a href="https://www.bb.org.bd/currency/note.php" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                            <img src="../static/images/Counterfeith banknote techniq.png"
+                                alt="Counterfeit Detection Techniques" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">Counterfeit Detection Techniques</h3>
+                                The identification of counterfeit currency depends on the utilization of machine learning models to examine the
+                                characteristics of banknotes, combined with UV/IR scanning to unveil concealed security... 
+                                </p>
+                                <a href="https://ieeexplore.ieee.org/document/7760162/similar#similar"
+                                    class="btn btn-primary">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                            <img src="../static/images/economicaly impact.png" alt="Economic Impact of Counterfeiting"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">The Impact of Counterfeiting on the Economy</h3>
+                                Counterfeiting undermines economic stability by weakening confidence in currency, resulting in financial losses due to
+                                decreased tax income and increased security costs and hampers overall economic growth and increases the burden on law enforcement and..</p>
+                                <a href="https://www.tandfonline.com/doi/abs/10.1080/01924036.2012.726320"
+                                    class="btn btn-primary">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Educational Resource HTML End -->
+
+        <!-- Contact Us HTML Start -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="heading6">
+                            <h1><span>Contact Us</span></h1>
+                        </div>
+                        <p>Please provide your name, email, and a message, and we'll get back to you as soon as
+                            possible.</p>
+
+                        <form>
+                            <div class="mb-3">
+                                <input class="form-control" type="text" placeholder="Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" type="email" placeholder="Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" type="number" placeholder="Phone Number" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" placeholder="How can we help you?" rows="4"
+                                    required></textarea>
+                            </div>
+                            <button id="contact-btn" type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="col-md-6" id="col">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.098092052639!2d90.42298167533794!3d23.81511067862623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c64c103a8093%3A0xd660a4f50365294a!2sNorth%20South%20University!5e0!3m2!1sen!2sbd!4v1729506139796!5m2!1sen!2sbd"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Us HTML End -->
+
+        <!-- Footer HTML Start -->
+        <footer id="footer">
+            <div class="container">
+                <div class="social-links text-center">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+
+                <div class="credit text-center">
+                    Designed By <a href="#">Team AM</a>
+                </div>
+
+                <div class="copyright text-center">
+                    &copy; <strong><span>2024 Copyright: Counterfeit Detection of Bangladesh Banknote</span></strong>
+                    All Rights
+                    Reserved
+                </div>
+            </div>
+        </footer>
+        <!-- Footer HTML End -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</body>
+
+</html>

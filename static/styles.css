@@ -1,0 +1,886 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+.all-content {
+    background: #f6eee4;
+}
+
+ul li a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-size: 48px;
+}
+h3 {
+    font-size: 36px;
+}
+h4 {
+    font-size: 28px;
+}
+h5 {
+    font-size: 24px;
+}
+h6 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+button,
+a {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* navbar css start*/
+#navbar {
+
+    background-color: #b2744c;
+    font-family: 'Roboto', sans-serif;
+}
+
+#logo img {
+    border-radius: 8px;
+    width: 40%;
+    margin-left: 50px;
+}
+
+.navbar-nav {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.navbar a {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-item .nav-link {
+    color: rgb(237, 235, 235);
+    margin-left: 10px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.nav-item .nav-link:hover {
+    background: #edba5c;
+    border-radius: 50px;
+    color: black;
+}
+
+#navbar form button {
+    background: black;
+    color: white;
+    border: 1px solid white;
+}
+
+/* navbar css end*/
+
+
+
+
+
+/* Home Section CSS Start */
+#home {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(30, 28, 28, 0.5), rgba(12, 1, 1, 0.5)), url(./images/h1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    color: rgb(248, 243, 243);
+    animation: fadeInUp 2s ease forwards;
+}
+.content h1 {
+    font-family: fantasy;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.content p {
+    margin-top: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+#btn {
+    width: 180px;
+    height: 50px;
+    margin-top: 30px;
+    background: #de773c;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background: #b2744c;
+    color: white;
+}
+
+#btn a {
+    color: white;
+    text-decoration: none;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for tablets Responsiveness */
+@media screen and (max-width: 768px) {
+    .content h1 {
+        font-size: 50px;
+
+    }
+
+    .content p {
+        font-size: 20px;
+
+    }
+
+    #btn {
+        width: 150px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .content h1 {
+        font-size: 40px;
+
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    #btn {
+        width: 130px;
+        height: 36px;
+        font-size: 16px;
+    }
+}
+
+/* Home Section CSS End */
+
+
+
+
+
+/* about part css start */
+#about {
+    width: 100%;
+    height: 100%;
+    padding: 70px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.about-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+#about-btn {
+    padding: 12px 30px;
+    background-color: #b2744c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#about-btn:hover {
+    background-color: #a5623a;
+}
+
+@media screen and (max-width: 991px) {
+    .about-text {
+        font-size: 15px;
+    }
+
+    .about-title {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-text {
+        font-size: 14px;
+    }
+
+    .about-title {
+        font-size: 24px;
+    }
+
+    #about {
+        padding: 60px 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about-title {
+        font-size: 22px;
+    }
+
+    .about-text {
+        font-size: 13px;
+    }
+
+    #about-btn {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+
+    .card img {
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+/* about part css end */
+
+
+
+
+
+
+/* detect CSS start */
+.detect {
+    width: 100%;
+    background-color: #e2dfda;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    padding: 80px 0;
+    margin-bottom: 0px;
+}
+
+.heading3 {
+    
+    border-bottom: 2px solid #b2744c;
+        
+}
+
+.detect-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+.detect-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn-detect {
+    background-color: #b2744c;
+    color: rgb(206, 89, 89);
+    padding: 12px 30px;
+    border: 3;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-detect:hover {
+    background-color: #23e805;
+}
+
+#uploadImage {
+    padding: 8px;
+    border: 2px solid #b2744c;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+#uploadImage:hover {
+    border-color: #a5623a;
+}
+
+#uploadedImage {
+    max-width: 480px; 
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    border: 2px solid #b2744c;
+    border-radius: 10px;
+}
+
+.result-title {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+#results {
+    text-align: center;
+    font-size: 24px;
+}
+
+.result-green {
+    color: green;
+    font-size: 38px;
+    
+}
+
+.result-red {
+    color: red;
+    font-size: 38px;
+   
+}
+
+@media screen and (max-width: 991px) {
+    .detect-title {
+        font-size: 24px;
+    }
+
+    .detect-description {
+        font-size: 15px;
+    }
+
+    .btn-detect {
+        font-size: 14px;
+    }
+
+    .result-title {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .detect-title {
+        font-size: 22px;
+    }
+
+    .detect-description {
+        font-size: 14px;
+    }
+
+    .btn-detect {
+        font-size: 13px;
+    }
+
+    .result-title {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .detect-title {
+        font-size: 20px;
+    }
+
+    .detect-description {
+        font-size: 13px;
+    }
+
+    .btn-detect {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    #uploadImage {
+        width: 100%;
+    }
+}
+
+/* detect CSS end */
+
+
+
+/* Team Section CSS Start */
+.team {
+    margin-top: 0;
+    background-color: #f6f6f6;
+    padding: 80px 0;
+}
+
+.team-member {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #b2744c;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+.team-img:hover {
+    border-color: #a5623a;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+}
+
+.btn-outline-primary {
+    border-color: #b2744c;
+    color: #b2744c;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: #b2744c;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 991px) {
+    .team-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-text {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heading3 {
+        font-size: 28px;
+    }
+
+    .team-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-text {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .heading3 {
+        font-size: 26px;
+    }
+
+    .team-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-text {
+        font-size: 11px;
+    }
+}
+
+/* Team Section CSS End */
+
+
+
+
+
+/* Educational Resource CSS Start */
+.Resource {
+    background-color: #f4f4f4;
+    padding: 80px 0;
+}
+
+.heading3 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #b2744c;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.card-body p {
+    color: #555;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: #b2744c;
+    border-color: #b2744c;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #9e6438;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-body p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 180px;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-body p {
+        font-size: 12px;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+}
+
+/* Educational Resource CSS End */
+
+
+
+
+
+
+
+
+
+/* Contact CSS Start */
+.contact {
+    background-color: #f7f5f2;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.contact .container {
+    background: linear-gradient(95deg, white 60%, #b2744c 0%);
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.heading6 h1 {
+    font-size: 34px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.heading6 h1 span {
+    color: #b2744c;
+}
+
+.contact p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.contact .form-control {
+    border: 1px solid #544545;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#contact-btn {
+    background-color: #b2744c;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-btn:hover {
+    background-color: #5d114b;
+}
+
+#col iframe {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact .container {
+        background: white;
+        padding: 30px;
+    }
+
+    #col {
+        margin-top: 30px;
+    }
+
+    .contact {
+        padding-top: 50px;
+    }
+
+    .heading6 h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact p {
+        font-size: 14px;
+    }
+
+    .contact .form-control {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    #contact-btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
+
+/* Contact CSS End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer CSS Start */
+#footer {
+    background: #cdc5bf;
+    padding: 40px 0;
+    font-size: 18px;
+}
+
+#footer .social-links {
+    margin-bottom: 20px;
+}
+
+#footer .social-links .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    background-color: #3a3a3a;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#footer .social-links .social-icon:hover {
+    background-color: #b2744c;
+}
+
+.credit {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.credit a {
+    color: #fffefd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.credit a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #222;
+}
+
+#footer span {
+    color: #2c2c2c;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #footer .social-links .social-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .credit {
+        font-size: 14px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    #footer .social-links {
+        margin-bottom: 15px;
+    }
+
+    .credit {
+        font-size: 13px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+}
+
+/* Footer CSS End */
